@@ -22,7 +22,7 @@ if(ISSET($_POST['search'])){
 <hr style="border-top:2px dotted #ccc;"/>
 <?php
     require 'db_conn.php';
-    $query = mysqli_query($conn, "SELECT * FROM `master_dataset_1` WHERE `COL 1` LIKE '%$keyword%' ORDER BY `COL 8`") or die(mysqli_error());
+    $query = mysqli_query($conn, "SELECT * FROM `master_dataset_1` WHERE `COL 8` LIKE '%$keyword%' ORDER BY `COL 8`") or die(mysqli_error());
     while($fetch = mysqli_fetch_array($query)){
 ?>
 <div style="word-wrap:break-word;">
